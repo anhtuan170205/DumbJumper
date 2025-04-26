@@ -1,0 +1,1010 @@
+fileFormatVersion: 2
+guid: 4aa9b69b95fe5ee4487324af10ac467a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LargeSlime_Grey_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1569
+        width: 273
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a6afbc2ac06444dbb8c10b28f6a034
+      internalID: -363462263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1571
+        width: 283
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9909586fc1751424fb931a947a0fafc7
+      internalID: 1800831445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1572
+        width: 295
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffeca2083768101459dd044b9773f463
+      internalID: -787447192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_3
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 1571
+        width: 283
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0acebcf67685245ba9415d1c479193
+      internalID: 1662714134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1262
+        width: 258
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d3120f9b218dc4fa068bb2eb11f04d
+      internalID: -1546071040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_12
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1263
+        width: 271
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64b0ec4d18f7704c8f218a9fc82566b
+      internalID: 1393843816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_14
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1274
+        width: 261
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e14cd9ed806a54cbc23d19e531a97f
+      internalID: -2123860863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_20
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1288
+        width: 246
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7226cbacd8d5fd4996b369edbdfd696
+      internalID: 1601726216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_24
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 946
+        width: 259
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1316ddfd259534d8fbed7e996c12a9
+      internalID: 348735796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_25
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 949
+        width: 264
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef992196091881344856169e1fdca97b
+      internalID: -222583613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_26
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 952
+        width: 271
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240541efa496b4f4985770598604ed6c
+      internalID: -1863053203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_27
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 949
+        width: 264
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a07c77d718913a40a5d081b833e2f08
+      internalID: 850255703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_28
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 637
+        width: 254
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78c75535abbd3047839382dbfbf2209
+      internalID: -263622742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_29
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 828
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60916ce0178c9714fb43539396a1d98b
+      internalID: -979997707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_30
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 840
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb28c359ce9ce242aca26ff4b3efcda
+      internalID: 376367437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_31
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 835
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcae177a8ed1a1449ccbd45b909a8b5
+      internalID: 1980836353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_32
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 644
+        width: 222
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172de3690a3704e4793b715b751bd4c3
+      internalID: -1147507135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_33
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 818
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c887ca837186c458d471942fa5f408
+      internalID: 1159236981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_34
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 790
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0371d4d4e7b4dbd44b8afc2a6d614e18
+      internalID: -1812108084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_35
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 652
+        width: 224
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ede9a132e19dae4e929d826bc76373d
+      internalID: -1721177601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_36
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 782
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11544984bfcdb40438ff6f524978ff54
+      internalID: -344821475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_37
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 679
+        width: 157
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a4096618c0a7e48b756007eae7cafa
+      internalID: -1744040665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_38
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 760
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f73248e7c6c3c14e981b079b7ad6cac
+      internalID: 389392688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_39
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 680
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99fc83a676528a498eb970b6dd0b44d
+      internalID: -1704010348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_40
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 326
+        width: 259
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788c52aba88e78f4f88fdcb4153e7e04
+      internalID: 1067385915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_41
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 329
+        width: 264
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4881acea220936c49b9a382d7a65e9b3
+      internalID: -508433444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_42
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 332
+        width: 271
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02d76740ca5d5a4289d48047586fc51
+      internalID: -1501345476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_43
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 329
+        width: 264
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36c27c04b5fbe8499a7c81a25e242d9
+      internalID: 1747721996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_44
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 17
+        width: 254
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacea4dfe0a729b4385ff541e6d8353e
+      internalID: -131282504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_45
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 220
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e35cfc298278914793d5ca079f94575
+      internalID: 1494283696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_46
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 208
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19efc6e166546b4d88bfccdf95de5e7
+      internalID: 786503115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_47
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 215
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d7e4edde77e66458f70180382ae31c
+      internalID: 827703314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_48
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 24
+        width: 222
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce50f7b57805d074db8fdc9646457309
+      internalID: -1375306882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_49
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 198
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c1b452ad93ecd43927af538bb4bd5b
+      internalID: -210464371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_50
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 170
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550779c85b9ebbb4fb6022ea8f26ff84
+      internalID: 794778327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_51
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 162
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977d4895ce1ce4e409b634b552424731
+      internalID: 582401732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_52
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 32
+        width: 224
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9cac15b4625acb4bbc4c9e3a861a6eb
+      internalID: -1346695728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_53
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 59
+        width: 158
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ff3b9920a53d94199af61d605e3b4a
+      internalID: 1156612583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_54
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 140
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d6a39d873fe4e46b611d0715cee773
+      internalID: -976561673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LargeSlime_Grey_55
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 60
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ae453bbd9c89d42a9293b21cee87da
+      internalID: 1083187903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LargeSlime_Grey_0: -363462263
+      LargeSlime_Grey_1: 1800831445
+      LargeSlime_Grey_10: 2060141468
+      LargeSlime_Grey_11: 744985629
+      LargeSlime_Grey_12: 1393843816
+      LargeSlime_Grey_13: 380333177
+      LargeSlime_Grey_14: -2123860863
+      LargeSlime_Grey_15: -1139619860
+      LargeSlime_Grey_16: 1190016759
+      LargeSlime_Grey_17: -1411459791
+      LargeSlime_Grey_18: 889537970
+      LargeSlime_Grey_19: 1761230762
+      LargeSlime_Grey_2: -787447192
+      LargeSlime_Grey_20: 1601726216
+      LargeSlime_Grey_21: 1098216559
+      LargeSlime_Grey_22: -895710945
+      LargeSlime_Grey_23: -1282729106
+      LargeSlime_Grey_24: 348735796
+      LargeSlime_Grey_25: -222583613
+      LargeSlime_Grey_26: -1863053203
+      LargeSlime_Grey_27: 850255703
+      LargeSlime_Grey_28: -263622742
+      LargeSlime_Grey_29: -979997707
+      LargeSlime_Grey_3: 1662714134
+      LargeSlime_Grey_30: 376367437
+      LargeSlime_Grey_31: 1980836353
+      LargeSlime_Grey_32: -1147507135
+      LargeSlime_Grey_33: 1159236981
+      LargeSlime_Grey_34: -1812108084
+      LargeSlime_Grey_35: -1721177601
+      LargeSlime_Grey_36: -344821475
+      LargeSlime_Grey_37: -1744040665
+      LargeSlime_Grey_38: 389392688
+      LargeSlime_Grey_39: -1704010348
+      LargeSlime_Grey_4: -1546071040
+      LargeSlime_Grey_40: 1067385915
+      LargeSlime_Grey_41: -508433444
+      LargeSlime_Grey_42: -1501345476
+      LargeSlime_Grey_43: 1747721996
+      LargeSlime_Grey_44: -131282504
+      LargeSlime_Grey_45: 1494283696
+      LargeSlime_Grey_46: 786503115
+      LargeSlime_Grey_47: 827703314
+      LargeSlime_Grey_48: -1375306882
+      LargeSlime_Grey_49: -210464371
+      LargeSlime_Grey_5: -795341444
+      LargeSlime_Grey_50: 794778327
+      LargeSlime_Grey_51: 582401732
+      LargeSlime_Grey_52: -1346695728
+      LargeSlime_Grey_53: 1156612583
+      LargeSlime_Grey_54: -976561673
+      LargeSlime_Grey_55: 1083187903
+      LargeSlime_Grey_6: 2072321817
+      LargeSlime_Grey_7: -1908933672
+      LargeSlime_Grey_8: 1577095812
+      LargeSlime_Grey_9: -1422510948
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
