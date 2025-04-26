@@ -33,15 +33,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pull",
-                    "type": "Button",
-                    "id": "46a35202-c861-4cb9-b065-3d1b1a96f4c1",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Aim",
                     "type": "Value",
                     "id": "adc44016-967d-4782-8179-88b1877a9c2c",
@@ -176,22 +167,11 @@
                 {
                     "name": "",
                     "id": "43190b76-04c8-4148-8d4b-bfd23928df8c",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PlayerControl",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "40361b36-09d0-426b-9ba4-978ca7cb46a0",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "PlayerControl",
-                    "action": "Pull",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
