@@ -9,8 +9,7 @@ using System;
 [CreateAssetMenu(fileName = "New Input Reader", menuName = "Input/Input Reader")]
 public class InputReader : ScriptableObject, IPlayerActions
 {
-    public event Action ShootEvent;
-    public event Action PullEvent;
+    public event Action<bool> ShootEvent;
     public event Action<Vector2> MoveEvent;
     public event Action JumpEvent;
     public Vector2 AimPosition { get; private set; }
@@ -32,17 +31,14 @@ public class InputReader : ScriptableObject, IPlayerActions
     {
         if (context.performed)
         {
-            ShootEvent?.Invoke();
+            ShootEvent?.Invoke(true);
         }
-    }
-    public void OnPull(InputAction.CallbackContext context)
-    {
-        if (context.performed)
+        else if (context.canceled)
         {
-            PullEvent?.Invoke();
+            ShootEvent?.Invoke(false);
         }
-
     }
+
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.performed)

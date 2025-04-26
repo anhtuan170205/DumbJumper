@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HookGun : MonoBehaviour
+public class PlayerAim : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private InputReader inputReader;
