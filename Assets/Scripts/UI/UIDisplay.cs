@@ -43,7 +43,7 @@ public class UIDisplay : MonoBehaviour
     private void UpdateGrappleCooldownSlider()
     {
         if (grapplingHook == null || grappleCooldownSlider == null) return;
-        float cooldownProgress = 1 - (grapplingHook.CurrentCooldown / grapplingHook.GrappleCooldown);
+        float cooldownProgress = (grapplingHook.CurrentCooldown / grapplingHook.GrappleCooldown);
         grappleCooldownSlider.value = cooldownProgress;
     }
 }

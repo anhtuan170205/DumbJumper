@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Platform
   - Coin
-  - Grapple
+  - Decoration
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Platform
     uniqueID: 3875418995
+    locked: 0
+  - name: 
+    uniqueID: 4149881295
     locked: 0
   - name: Coin
     uniqueID: 767952369
