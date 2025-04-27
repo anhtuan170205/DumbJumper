@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 6402655635676386016}
   - component: {fileID: 6925907136943770948}
   - component: {fileID: 1900276553258225932}
-  - component: {fileID: 3498484823893395493}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -39,6 +38,7 @@ Transform:
   m_Children:
   - {fileID: 2174498144644648767}
   - {fileID: 8576513491396222835}
+  - {fileID: 485991086991337011}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1095461542981251309
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -232,6 +232,9 @@ MonoBehaviour:
   rb: {fileID: 1537432926305987974}
   moveSpeed: 10
   jumpForce: 5
+  groundCheckDistance: 0.5
+  groundCheckWidth: 1
+  groundCheckPoint: {fileID: 485991086991337011}
 --- !u!114 &1900276553258225932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,41 +254,6 @@ MonoBehaviour:
     m_Bits: 64
   ropeRenderer: {fileID: 2644247022571305066}
   grappleCooldown: 1
---- !u!70 &3498484823893395493
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3722355473268261099}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.039171696}
-  m_Size: {x: 1, y: 1.0783434}
-  m_Direction: 0
 --- !u!1 &5182587109219668799
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +390,37 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &6203622397756745919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485991086991337011}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &485991086991337011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203622397756745919}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5223529956845226449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8666029308555503624
 GameObject:
   m_ObjectHideFlags: 0
