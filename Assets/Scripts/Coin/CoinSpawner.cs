@@ -31,6 +31,7 @@ public class CoinSpawner : MonoBehaviour
         {
             Vector2 spawnPoint = GetSpawnPoint();
             Coin newCoin = Instantiate(coinPrefab, spawnPoint, Quaternion.identity);
+            newCoin.transform.SetParent(this.transform);
             newCoin.gameObject.SetActive(true);
             coins[i] = newCoin;
         }

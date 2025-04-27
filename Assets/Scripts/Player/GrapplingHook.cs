@@ -72,13 +72,4 @@ public class GrapplingHook : MonoBehaviour
         }
 
     }
-
-    private void OnGUI()
-    {
-        if (isOnCooldown)
-        {
-            float remaining = (lastGrappleTime + grappleCooldown) - Time.time;
-            GUI.Label(new Rect(10, 10, 200, 20), $"Grapple Cooldown: {remaining.ToString("F1")}s");
-        }
-    }
 }
