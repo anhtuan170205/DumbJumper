@@ -1,5 +1,13 @@
 fileFormatVersion: 2
-guid: 88ac1705103c74c40ba89c920f6c60af
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Assets/Animations/Player_Animation/Player_AnimatorController.controller.meta
+guid: fd8b529295a46a44abcf5ee1f6e6bd36
+========
+guid: bb02d0c21422c234a80061e39847a5da
+>>>>>>>> Stashed changes:Assets/Animations/LargeSlime_Purple_0.controller.meta
+=======
+guid: 213a1d94531f88a489b6a9e32588ba15
+>>>>>>> Stashed changes
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000

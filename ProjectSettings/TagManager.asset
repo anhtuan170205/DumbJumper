@@ -3,17 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Sword
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Platform
-  - Coin
-  - Decoration
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -40,19 +42,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 200869575
-    locked: 0
-  - name: Platform
-    uniqueID: 3875418995
-    locked: 0
-  - name: 
-    uniqueID: 4149881295
-    locked: 0
-  - name: Coin
-    uniqueID: 767952369
-    locked: 0
-  - name: Player
-    uniqueID: 2361133093
     locked: 0
