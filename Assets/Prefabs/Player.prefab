@@ -83,7 +83,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933834203
-  m_SortingLayer: 5
+  m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 1888998925, guid: 6bd1c00f5f6ecc746b6e2277f8a7d292, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &252575202709849071
@@ -263,8 +263,6 @@ MonoBehaviour:
   groundCheckDistance: 0.5
   groundCheckWidth: 1
   groundCheckPoint: {fileID: 485991086991337011}
-  jumpBufferTime: 0.2
-  coyoteTime: 0.15
 --- !u!114 &1900276553258225932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +279,7 @@ MonoBehaviour:
   grappleLength: 2
   grappleableLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   ropeRenderer: {fileID: 2644247022571305066}
   grappleCooldown: 1
 --- !u!114 &-5606025202193087828
@@ -390,7 +388,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933834203
-  m_SortingLayer: 5
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
