@@ -29,29 +29,32 @@ public class MaceSpawn : MonoBehaviour
     [SerializeField] private float speedStep = 0.5f;
     [SerializeField] private float maxSpeed = 5f;
 
+    [Header("Wave Control")]
+    [SerializeField] private float curveStartTime = 30f;
+    [SerializeField] private float waveChance = 0.5f;
+    [SerializeField] private float initialAmplitude = 0.2f; // Init
+    [SerializeField] private float amplitudeGrowthRate = 0.05f; // Rate
+    [SerializeField] private float maxAmplitude = 2f; // Max
 
     private List<GameObject> verticalPool = new List<GameObject>();
     private List<GameObject> horizontalPool = new List<GameObject>();
 
     private float spawnTimer = 0f;
-    private int currentActiveMace = 0;
     private float speedTimer = 0f;
+    private int currentActiveMace = 0;
 
-    private void Awake()
-    {
+    private void Awake() {
         if (Instance != null && Instance != this)
             Destroy(gameObject);
         else
             Instance = this;
     }
 
-    private void Start()
-    {
+    private void Start() {
         CreatePool();
     }
 
-    private void Update()
-    {
+    private void Update() {
         spawnTimer += Time.deltaTime;
         speedTimer += Time.deltaTime;
 
@@ -68,8 +71,7 @@ public class MaceSpawn : MonoBehaviour
         }
     }
 
-    private void CreatePool()
-    {
+    private void CreatePool() {
         for (int i = 0; i < poolSize; i++)
         {
             var v = Instantiate(verticalMacePrefab);
@@ -84,41 +86,51 @@ public class MaceSpawn : MonoBehaviour
         }
     }
 
-    private void SpawnMaceFromPool()
-    {
+    private void SpawnMaceFromPool() {
         int random = Random.Range(0, 4);
 
-        if ((random == 0 || random == 1) && TryGetFromPool(verticalPool, out var mace))
-        {
+        bool useWaveMovement = false;
+        float waveAmplitude = 0f;
+
+        if (Time.time >= curveStartTime) {
+            useWaveMovement = Random.value < waveChance;
+
+            if (useWaveMovement)
+            {
+                float elapsed = Time.time - curveStartTime;
+                waveAmplitude = Mathf.Min(initialAmplitude + amplitudeGrowthRate * elapsed, maxAmplitude);
+            }
+        }
+
+        if ((random == 0 || random == 1) && TryGetFromPool(verticalPool, out var mace)) {
             if (random == 0) // Top
             {
                 mace.transform.position = new Vector3(RandomX(TopMaceSpawnPoint), TopMaceSpawnPoint.transform.position.y, 0);
                 if (mace.TryGetComponent<Mace_Vertical>(out var vert))
-                    vert.ResetMace(true);
+                    vert.ResetMace(true, useWaveMovement, waveAmplitude);
             }
             else // Bottom
             {
                 mace.transform.position = new Vector3(RandomX(BottomMaceSpawnPoint), BottomMaceSpawnPoint.transform.position.y, 0);
                 if (mace.TryGetComponent<Mace_Vertical>(out var vert))
-                    vert.ResetMace(false);
+                    vert.ResetMace(false, useWaveMovement, waveAmplitude);
             }
 
             mace.SetActive(true);
             currentActiveMace++;
         }
-        else if ((random == 2 || random == 3) && TryGetFromPool(horizontalPool, out var maceH))
-        {
+        else if ((random == 2 || random == 3) && TryGetFromPool(horizontalPool, out var maceH)) {
             if (random == 2) // Left
             {
                 maceH.transform.position = new Vector3(LeftMaceSpawnPoint.transform.position.x, RandomY(LeftMaceSpawnPoint), 0);
                 if (maceH.TryGetComponent<Mace_Horizontal>(out var hor))
-                    hor.ResetMace(true);
+                    hor.ResetMace(true, useWaveMovement, waveAmplitude);
             }
             else // Right
             {
                 maceH.transform.position = new Vector3(RightMaceSpawnPoint.transform.position.x, RandomY(RightMaceSpawnPoint), 0);
                 if (maceH.TryGetComponent<Mace_Horizontal>(out var hor))
-                    hor.ResetMace(false);
+                    hor.ResetMace(false, useWaveMovement, waveAmplitude);
             }
 
             maceH.SetActive(true);
@@ -126,18 +138,15 @@ public class MaceSpawn : MonoBehaviour
         }
     }
 
-    private float RandomX(GameObject point)
-    {
+    private float RandomX(GameObject point) {
         return Random.Range(point.transform.position.x - spawnDistance_x, point.transform.position.x + spawnDistance_x);
     }
 
-    private float RandomY(GameObject point)
-    {
+    private float RandomY(GameObject point) {
         return Random.Range(point.transform.position.y - spawnDistance_y, point.transform.position.y + spawnDistance_y);
     }
 
-    private bool TryGetFromPool(List<GameObject> pool, out GameObject result)
-    {
+    private bool TryGetFromPool(List<GameObject> pool, out GameObject result) {
         foreach (var obj in pool)
         {
             if (!obj.activeInHierarchy)
@@ -150,13 +159,11 @@ public class MaceSpawn : MonoBehaviour
         return false;
     }
 
-    public void OnMaceDisabled()
-    {
+    public void OnMaceDisabled() {
         currentActiveMace--;
     }
 
-    private void IncreaseAllMaceSpeed()
-    {
+    private void IncreaseAllMaceSpeed() {
         foreach (var mace in verticalPool)
         {
             if (mace.TryGetComponent<Mace_Vertical>(out var vert))
@@ -175,5 +182,4 @@ public class MaceSpawn : MonoBehaviour
             }
         }
     }
-
 }
