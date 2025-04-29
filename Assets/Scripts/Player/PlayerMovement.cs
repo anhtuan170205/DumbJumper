@@ -16,19 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundCheckDistance = 0.6f;
     [SerializeField] private float groundCheckWidth = 0.5f;
     [SerializeField] private Transform groundCheckPoint;
-    
-    [Header("Jump Buffer")]
-    [SerializeField] private float jumpBufferTime = 0.2f;
-    
-    [Header("Coyote Time")]
-    [SerializeField] private float coyoteTime = 0.15f;
 
     private Vector2 previousMoveInput;
     private bool isGrounded;
-    private float lastJumpPressedTime;
-    private bool jumpBuffered;
-    private float lastGroundedTime;
-    private bool canCoyoteJump;
 
     private void Start()
     {
@@ -42,59 +32,16 @@ public class PlayerMovement : MonoBehaviour
         inputReader.JumpEvent -= HandleJump;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        // Movement
+        // Apply movement
         rb.velocity = new Vector2(previousMoveInput.x * moveSpeed, rb.velocity.y);
-
-        // Ground check
-        bool wasGrounded = isGrounded;
-        isGrounded = Physics2D.BoxCast(
-            groundCheckPoint.position,
-            new Vector2(groundCheckWidth, 0.05f),
-            0f,
-            Vector2.down,
-            groundCheckDistance,
-            LayerMask.GetMask("Platform")
-        );
-
-        // Coyote time tracking
-        if (isGrounded)
-        {
-            lastGroundedTime = Time.time;
-            canCoyoteJump = true;
-        }
-        else if (wasGrounded && !isGrounded)
-        {
-            // Just left the ground - start coyote time
-            StartCoroutine(DisableCoyoteTimeAfterDelay());
-        }
-
-        // Check for buffered jump or coyote jump
-        bool canJump = isGrounded || (canCoyoteJump && Time.time - lastGroundedTime <= coyoteTime);
-        
-        if (jumpBuffered && canJump)
-        {
-            ExecuteJump();
-            jumpBuffered = false;
-            canCoyoteJump = false; // Used up coyote time
-        }
-
-        // Debug drawing
-        DebugDrawGroundCheck();
-    }
-
-    private IEnumerator DisableCoyoteTimeAfterDelay()
-    {
-        yield return new WaitForSeconds(coyoteTime);
-        canCoyoteJump = false;
     }
 
     private void HandleMove(Vector2 moveInput)
     {
         previousMoveInput = moveInput.magnitude > 0.1f ? moveInput.normalized : Vector2.zero;
         
-        // Flip character based on movement direction
         if (moveInput.x != 0)
         {
             bodyTransform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1, 1);
@@ -103,20 +50,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleJump()
     {
-        lastJumpPressedTime = Time.time;
-        
-        bool canJump = isGrounded || (canCoyoteJump && Time.time - lastGroundedTime <= coyoteTime);
-        
-        if (canJump)
+        if (CheckGrounded())
         {
             ExecuteJump();
-            canCoyoteJump = false; // Used up coyote time
-        }
-        else
-        {
-            // Buffer the jump if we're in the air
-            jumpBuffered = true;
-            StartCoroutine(ClearJumpBufferAfterTime());
         }
     }
 
@@ -126,33 +62,27 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
-    private IEnumerator ClearJumpBufferAfterTime()
+    private bool CheckGrounded()
     {
-        yield return new WaitForSeconds(jumpBufferTime);
-        jumpBuffered = false;
-    }
+        if (groundCheckPoint == null) return false;
 
-    private void DebugDrawGroundCheck()
-    {
-        if (groundCheckPoint == null) return;
-        
-        Debug.DrawLine(
-            groundCheckPoint.position + Vector3.right * groundCheckWidth/2,
-            groundCheckPoint.position + Vector3.right * groundCheckWidth/2 + Vector3.down * groundCheckDistance,
-            isGrounded ? Color.green : Color.red
+        RaycastHit2D hit = Physics2D.BoxCast(
+            groundCheckPoint.position,
+            new Vector2(groundCheckWidth, 0.05f),
+            0f,
+            Vector2.down,
+            groundCheckDistance,
+            LayerMask.GetMask("Platform")
         );
-        Debug.DrawLine(
-            groundCheckPoint.position + Vector3.left * groundCheckWidth/2,
-            groundCheckPoint.position + Vector3.left * groundCheckWidth/2 + Vector3.down * groundCheckDistance,
-            isGrounded ? Color.green : Color.red
-        );
+
+        return hit.collider != null;
     }
 
     private void OnDrawGizmos()
     {
         if (groundCheckPoint == null) return;
-        
-        Gizmos.color = isGrounded ? Color.green : Color.red;
+
+        Gizmos.color = Color.green;
         Vector3 boxCenter = groundCheckPoint.position + Vector3.down * groundCheckDistance/2;
         Gizmos.DrawWireCube(
             boxCenter,
