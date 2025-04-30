@@ -83,7 +83,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933834203
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: 1888998925, guid: 6bd1c00f5f6ecc746b6e2277f8a7d292, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -258,13 +258,12 @@ MonoBehaviour:
   inputReader: {fileID: 11400000, guid: 2ca0d1d61a48f462dadfd70cb9e53380, type: 2}
   bodyTransform: {fileID: 5223529956845226449}
   rb: {fileID: 1537432926305987974}
+  sceneLoader: {fileID: 499117574220816517, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
   moveSpeed: 10
   jumpForce: 12
   groundCheckDistance: 0.5
   groundCheckWidth: 1
   groundCheckPoint: {fileID: 485991086991337011}
-  jumpBufferTime: 0.2
-  coyoteTime: 0.15
 --- !u!114 &1900276553258225932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +306,7 @@ Animator:
   m_GameObject: {fileID: 3722355473268261099}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 88ac1705103c74c40ba89c920f6c60af, type: 2}
+  m_Controller: {fileID: 9100000, guid: 48d6b5b68d2864fa78fd9c63803b4492, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -390,7 +389,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933834203
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
