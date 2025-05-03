@@ -269,8 +269,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 365790654}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 2441193051979747451, guid: 358fc2815debe4d559aeda44a42062cc, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -319,74 +319,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303872717}
   m_CullTransparentMesh: 1
---- !u!1001 &365790653
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870117884828575968, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457567406396427751, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-      propertyPath: m_Name
-      value: SceneLoader
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
---- !u!114 &365790654 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 499117574220816517, guid: 8394a15f1f3ad4cdbabde14cfbf4c99a, type: 3}
-  m_PrefabInstance: {fileID: 365790653}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13921b1034d0d4509932b2bd7993ed60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &395019912
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,8 +518,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 365790654}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 2441193051979747451, guid: 358fc2815debe4d559aeda44a42062cc, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
@@ -810,9 +742,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 365790654}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadGameplay
+      - m_Target: {fileID: 2441193051979747451, guid: 358fc2815debe4d559aeda44a42062cc, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1069,7 +1001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'SCORE: 00'
+  m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f4b751c5a2fe444378043e279cf0ae7f, type: 2}
   m_sharedMaterial: {fileID: 644530980453153073, guid: f4b751c5a2fe444378043e279cf0ae7f, type: 2}
@@ -1096,8 +1028,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 96
-  m_fontSizeBase: 96
+  m_fontSize: 200
+  m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1154,4 +1086,3 @@ SceneRoots:
   - {fileID: 1370540804}
   - {fileID: 395019916}
   - {fileID: 1846679197}
-  - {fileID: 365790653}

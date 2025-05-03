@@ -1,68 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class SceneLoader : MonoBehaviour
+public static class SceneLoader
 {
-    [SerializeField] private GameObject pausePanel;
-    public static bool isPaused { get; private set; }
-    public static SceneLoader Instance { get; private set; }
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
-    }
-    public void LoadGameplay()
+    public static void LoadGameplay()
     {
         SceneManager.LoadScene("Gameplay");
-        ScoreManager.Instance.ResetScore();
-        Time.timeScale = 1;
-        isPaused = false;
+        ScoreManager.Instance.ResetScore(); // Make sure ScoreManager is still valid
+        Time.timeScale = 1f;
     }
-    public void LoadMainMenu()
+
+    public static void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
-    public void LoadGameOver()
+
+    public static void LoadGameOver()
     {
         SceneManager.LoadScene("GameOver");
     }
-    public void QuitGame()
+
+    public static void QuitGame()
     {
         Application.Quit();
-    }
-    public void PauseGame()
-    {
-        Time.timeScale = 0;
-        isPaused = true;
-        pausePanel.SetActive(true);
-    }
-    public void ResumeGame()
-    {
-        Time.timeScale = 1;
-        isPaused = false;
-        pausePanel.SetActive(false);
     }
 }

@@ -4,9 +4,10 @@ using UnityEngine;
 public class CoinSpawner : MonoBehaviour
 {
     public static CoinSpawner Instance { get; private set; }
-
+    [Header("Reference")]
     [SerializeField] private Coin coinPrefab;
     [SerializeField] private int maxCoins = 10;
+    [Header("Spawn Settings")]
     [SerializeField] private Vector2 xSpawnRange;
     [SerializeField] private Vector2 ySpawnRange;
     [SerializeField] private LayerMask layerMask;

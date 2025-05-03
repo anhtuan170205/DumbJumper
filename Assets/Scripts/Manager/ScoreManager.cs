@@ -7,6 +7,9 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
     public static event Action OnScoreChanged;
+    public static event Action OnXScoreChanged;
+
+    [SerializeField] private int scoreLevel = 10;
     private void Awake()
     {
         if (Instance == null)
@@ -28,6 +31,10 @@ public class ScoreManager : MonoBehaviour
     {
         score += amount;
         OnScoreChanged?.Invoke();
+        if (score % scoreLevel == 0)
+        {
+            OnXScoreChanged?.Invoke();
+        }
     }
     public void ResetScore()
     {

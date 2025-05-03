@@ -49,7 +49,7 @@ public class GrapplingHook : MonoBehaviour
 
     private void HandleShoot(bool isShooting)
     {
-        if (isShooting && !isOnCooldown && !SceneLoader.isPaused)
+        if (isShooting && !isOnCooldown)
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, grappleableLayer);
             if (hit.collider != null)

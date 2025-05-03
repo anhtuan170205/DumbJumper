@@ -13,17 +13,24 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Vector2 bottomLeft;
     [SerializeField] private Vector2 bottomRight;
 
-    [Header("Spawn Settings")]
-    [SerializeField] private float spawnInterval = 2f;
-
+    private float spawnInterval = 5f;
     private float spawnTimer = 0f;
 
     private void Awake()
     {
         if (Instance != null && Instance != this)
+        {
             Destroy(gameObject);
+        }
         else
+        {
             Instance = this;
+        }
+    }
+
+    private void Start()
+    {
+        ScoreManager.OnXScoreChanged += HandleXScoreChanged;
     }
 
     private void Update()
@@ -75,5 +82,10 @@ public class EnemySpawner : MonoBehaviour
             Random.Range(minX, maxX),
             Random.Range(minY, maxY)
         );
+    }
+
+    private void HandleXScoreChanged()
+    {
+        spawnInterval = Mathf.Max(1f, spawnInterval - 0.5f);
     }
 }

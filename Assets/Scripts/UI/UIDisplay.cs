@@ -9,11 +9,16 @@ public class UIDisplay : MonoBehaviour
     
     [Header("Grapple Cooldown Display")]
     [SerializeField] private Slider grappleCooldownSlider;
-    [SerializeField] private GrapplingHook grapplingHook; 
+    [SerializeField] private GrapplingHook grapplingHook;
+
+    [Header("Pause Panel")]
+    [SerializeField] private GameObject pausePanel;
+
     private void OnEnable()
     {
         ScoreManager.OnScoreChanged += UpdateScoreDisplay;
-        
+        GameManager.OnGameStateChanged += HandleGameStateChanged;
+
         if (grappleCooldownSlider != null)
         {
             grappleCooldownSlider.minValue = 0;
@@ -25,6 +30,7 @@ public class UIDisplay : MonoBehaviour
     private void OnDisable()
     {
         ScoreManager.OnScoreChanged -= UpdateScoreDisplay;
+        GameManager.OnGameStateChanged -= HandleGameStateChanged;
     }
 
     private void UpdateScoreDisplay()
@@ -43,7 +49,14 @@ public class UIDisplay : MonoBehaviour
     private void UpdateGrappleCooldownSlider()
     {
         if (grapplingHook == null || grappleCooldownSlider == null) return;
-        float cooldownProgress = (grapplingHook.CurrentCooldown / grapplingHook.GrappleCooldown);
+        float cooldownProgress = grapplingHook.CurrentCooldown / grapplingHook.GrappleCooldown;
         grappleCooldownSlider.value = cooldownProgress;
+    }
+
+    private void HandleGameStateChanged(GameState newState)
+    {
+        if (pausePanel == null) return;
+
+        pausePanel.SetActive(newState == GameState.Pause);
     }
 }

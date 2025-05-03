@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private InputReader inputReader;
     [SerializeField] private Transform bodyTransform;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private SceneLoader sceneLoader;
     
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 4f;
@@ -77,32 +76,5 @@ public class PlayerMovement : MonoBehaviour
         );
 
         return hit.collider != null;
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (groundCheckPoint == null) return;
-
-        Gizmos.color = Color.green;
-        Vector3 boxCenter = groundCheckPoint.position + Vector3.down * groundCheckDistance/2;
-        Gizmos.DrawWireCube(
-            boxCenter,
-            new Vector3(groundCheckWidth, groundCheckDistance, 0)
-        );
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-        {
-            Die();
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-        }
-    }
-
-    private void Die()
-    {
-        sceneLoader.LoadGameOver();
     }
 }
