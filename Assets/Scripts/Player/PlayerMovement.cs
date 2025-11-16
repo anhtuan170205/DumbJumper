@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // Apply movement
-        rb.velocity = new Vector2(previousMoveInput.x * moveSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(previousMoveInput.x * moveSpeed, rb.linearVelocity.y);
     }
 
     private void HandleMove(Vector2 moveInput)
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ExecuteJump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, 0); // Reset vertical velocity
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // Reset vertical velocity
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
